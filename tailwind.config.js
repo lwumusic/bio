@@ -1,8 +1,8 @@
 module.exports = {
   theme: {
     fontFamily: {
-      display: ['Unbounded Variable', 'sans-serif'],
-      sans: ['Figtree Variable', 'sans-serif'],
+      display: ['Figtree Variable', 'sans-serif'],
+      sans: ['Inter Variable', 'sans-serif'],
     },
   },
 }
