@@ -1,7 +1,11 @@
 packages:
-  - '.'
+  - .
 
 onlyBuiltDependencies:
   - esbuild
   - sharp
   - workerd
+
+overrides:
+  h3@<=1.15.4: '>=1.15.5'
+  undici@>=7.0.0 <7.18.2: '>=7.18.2'
