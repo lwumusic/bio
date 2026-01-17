@@ -1,7 +1,29 @@
 ---
-const { title, description, href, bgl, bgr } = Astro.props;
+const { title, description, href, bg } = Astro.props;
+
+const colors = {
+  amber: {
+    bg: "bg-amber-100",
+    from: "hover:from-amber-200",
+    to: "hover:to-amber-300"
+  },
+  violet: {
+    bg: "bg-violet-100",
+    from: "hover:from-violet-200",
+    to: "hover:to-violet-300"
+  },
+  sky: {
+    bg: "bg-sky-100",
+    from: "hover:from-sky-200",
+    to: "hover:to-sky-300"
+  }
+};
+
+const bgClass = colors[bg]?.bg || "";
+const fromClass = colors[bg]?.from || "";
+const toClass = colors[bg]?.to || "";
 ---
-<div class={`w-full text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-${bgl}-100 hover:from-${bgl}-300 hover:to-${bgr}-300 transition`}>
+<div class={`w-full text-lg rounded-2xl px-6 py-3 shadow-lg hover:bg-linear-to-r ${bgClass} ${fromClass} ${toClass} transition`}>
     <a
             href={href}
             class="flex gap-8">
