@@ -1,0 +1,13 @@
+---
+const { title, description, href, bgl, bgr } = Astro.props;
+---
+<div class={`w-full text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-${bgl}-100 hover:from-${bgl}-300 hover:to-${bgr}-300 transition`}>
+    <a
+            href={href}
+            class="flex gap-8">
+        <div class="flex-1">
+            <p class="font-display font-medium text-2xl">{title}</p>
+            <p class="font-sans font-light text-sm">{description}</p>
+        </div>
+    </a>
+</div>
