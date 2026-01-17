@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import Image from 'astro/components/Image.astro';
+import ImgButton from '../components/img-button.astro';
+import Button from '../components/button.astro';
 ---
 
 <html lang="en">
@@ -48,89 +50,19 @@ import Image from 'astro/components/Image.astro';
 			</section>
 
 			<section class="max-w-2xl mx-auto pt-8 px-4 h-96">
-				<iframe data-testid="embed-iframe" title="Spotify Embed" style="border-radius:12px" src="https://open.spotify.com/embed/artist/6h2oR4XbwGdfhevDSo1o5w?utm_source=generator" width="100%" height="100%"allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="eager"></iframe>
+				<iframe data-testid="embed-iframe" title="Spotify Embed" style="border-radius:12px" src="https://open.spotify.com/embed/artist/6h2oR4XbwGdfhevDSo1o5w?utm_source=generator" width="100%" height="100%" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="eager"></iframe>
 			</section>
+
+
 		
 			<section class="mx-auto max-w-2xl grid gap-4 pt-8 text-slate-800 px-4">
-				<div class="w-full  text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-amber-100 hover:from-amber-200 hover:to-amber-300 transition">
-					<a
-						href="https://push.fm/fl/fo9hmvne"
-						class="flex gap-8">
-					<Image src="/albums/pirate&fiddle.jpg" alt="Cover art" width="64" height="64" loading="eager" class="aspect-square object-cover" />
-					<div class="flex-1 shrink">
-						<p class="font-display font-medium text-2xl">The Pirate and the Fiddle, out now</p>	
-						<p class="font-sans font-light text-sm">A song about the divide between my day life and my night life. 🎻</p>
-					</div>
-					</a>
-				</div>
-
-				<div class="w-full text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-violet-100 hover:from-violet-200 hover:to-violet-300 transition">
-					<a
-						href="https://push.fm/fl/iugfkg9t"
-						class="flex gap-8">
-					<Image src="/albums/time.png" alt="Cover art" width="64" height="64" loading="eager" class="aspect-square object-cover" />
-					<div class="flex-1">
-						<p class="font-display font-medium text-2xl">Time, also out now</p>	
-						<p class="font-sans font-light text-sm">A song about giving up on your dreams. 🕔</p>
-					</div>
-					</a>
-				</div>
-
-				<div class="w-full text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-violet-100 hover:from-violet-200 hover:to-violet-300 transition">
-					<a
-						href="https://lwumusic.com/lyrics"
-						class="flex gap-8">
-					<div class="flex-1">
-						<p class="font-display font-medium text-2xl">Lyrics</p>	
-						<p class="font-sans font-light text-sm">You could probably sing along to these.</p>
-					</div>
-					</a>
-				</div>
-
-				<div class="w-full text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-violet-100 hover:from-violet-200 hover:to-violet-300 transition">
-					<a
-						href="https://lwumusic.com/chords"
-						class="flex gap-8">
-					<div class="flex-1">
-						<p class="font-display font-medium text-2xl">Chord Sheets</p>	
-						<p class="font-sans font-light text-sm">I don't play guitar - but it's a start?</p>
-					</div>
-					</a>
-				</div>
-
-				<div class="w-full text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-violet-100 hover:from-violet-200 hover:to-violet-300 transition">
-					<a
-						href="https://ko-fi.com/lwu877"
-						class="flex gap-8">
-					<div class="flex-1">
-						<p class="font-display font-medium text-2xl">Buy me a coffee</p>	
-						<p class="font-sans font-light text-sm">Anything is appreciated - thanks for the support!</p>
-					</div>
-					</a>
-				</div>
-
-				<div class="w-full text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-violet-100 hover:from-violet-200 hover:to-violet-300 transition">
-					<a
-						href="https://lwumusic.com/"
-						class="flex gap-8">
-					<div class="flex-1">
-						<p class="font-display font-medium text-2xl">Visit my website</p>
-						<p class="text-md">@lwumusic.com</p>
-						<p class="font-sans font-light text-sm">Learn more about what makes me tick.</p>
-					</div>
-					</a>
-				</div>
-
-				<div class="w-full text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-sky-100 hover:from-sky-200 hover:to-sky-300 transition">
-					<a
-						href="https://lexwu.com/"
-						class="flex gap-8">
-					<div class="flex-1">
-						<p class="font-display font-medium text-2xl">Other projects by me</p>	
-						<p class="font-sans font-light text-sm">I'm also a journalist, photographer, and... well, plenty else.</p>
-					</div>
-					</a>
-				</div>
+				<ImgButton title="The Pirate and the Fiddle, out now" description="A song about the divide between my day life and my night life. 🎻" href="https://push.fm/fl/fo9hmvne" bgl="amber" bgr="amber" img="/albums/pirate&fiddle.jpg" imgalt="Cover art"/>
+				<ImgButton title="Time, also out now" description="A song about giving up on your dreams. 🕔" href="https://push.fm/fl/iugfkg9t" bgl="violet" bgr="violet" img="/albums/time.png" imgalt="Cover art"/>
+				<Button title="Lyrics" description="You could probably sing along to these." href="https://lwumusic.com/lyrics" bgl="violet" bgr="violet" />
+				<Button title="Chord Sheets" description="I don't play guitar - but it's a start?" href="https://lwumusic.com/chords" bgl="violet" bgr="violet" />
+				<Button title="Buy me a coffee" description="Anything is appreciated - thanks for the support!" href="https://ko-fi.com/lwu877" bgl="violet" bgr="violet" />
+				<Button title="Visit my website" description="Learn more about what makes me tick." href="https://lwumusic.com/" bgl="violet" bgr="violet" />
+				<Button title="Other projects by me" description="I'm also a journalist, photographer, and... well, plenty else." href="https://lexwu.com/" bgl="sky" bgr="sky" />
 			</section>
 
 			<p class="text-center text-white">- - - - - - - - - - - - -</p>
@@ -138,27 +70,8 @@ import Image from 'astro/components/Image.astro';
 			<h2 class="text-2xl text-center text-white pb-4 font-display">Connect with me:</h2>
 
 			<section class="mx-auto max-w-2xl grid gap-4 text-slate-800 px-4">
-				<div class="w-fulltext-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-violet-100 hover:from-violet-200 hover:to-violet-300 transition">
-					<a
-						href="https://lwu877.substack.com"
-						class="flex gap-8">
-					<div class="flex-1 shrink">
-						<p class="font-display font-medium text-2xl">Sign up for my newsletter</p>	
-						<p class="font-sans font-light text-sm">Hear when I release new stuff, plus a first look at liner notes</p>
-					</div>
-					</a>
-				</div>
-
-				<div class="w-full  text-lg rounded-2xl px-6 py-3 shadow-lg bg-linear-to-r bg-violet-100 hover:from-violet-200 hover:to-violet-300 transition">
-					<a
-						href="https://lwumusic.com/contact"
-						class="flex gap-8">
-					<div class="flex-1 shrink">
-						<p class="font-display font-medium text-2xl">Contact me</p>	
-						<p class="font-sans font-light text-sm">Booking? Collaborations? Just want to say hi?</p>
-					</div>
-					</a>
-				</div>
+				<Button title="Sign up for my newsletter" description="Hear when I release new stuff, plus a first look at liner notes" href="https://lwu877.substack.com" bgl="violet" bgr="violet" />
+				<Button title="Contact me" description="Booking? Collaborations? Just want to say hi?" href="https://lwumusic.com/contact" bgl="violet" bgr="violet" />
 			</section>	
 
 			<p class="text-center text-white">- - - - - - - - - - - - -</p>
@@ -173,6 +86,7 @@ import Image from 'astro/components/Image.astro';
 						<p>Spotify</p>	
 					</a>
 				</div>
+
 				<div class="w-full bg-red-50 text-lg rounded-2xl px-6 py-3 shadow-lg hover:bg-linear-to-l hover:to-red-200 hover:from-pink-100 transition border-2">
 					<a
 						href="https://music.apple.com/us/artist/lex-wu/1667329077"
@@ -240,7 +154,6 @@ import Image from 'astro/components/Image.astro';
 						<p>All rights reserved. Built with <a href="https://astro.build/" class="underline">Astro</a>, <a class="underline" href="https://tailwindcss.com">TailwindCSS</a>, and <a class="underline" href="https://tabler.io/icons">Tabler Icons.</a></p>
 						<p>Source code available on <a class="underline" href="https://github.com/lwumusic/bio">Github.</a> <a class="underline" href="https://lwumusic.com/privacy">Privacy Policy</a></p>
 					</div>
-					</a>
 				</div>
 			</section>
 
